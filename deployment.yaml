@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-devops-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-devops-app
+  template:
+    metadata:
+      labels:
+        app: my-devops-app
+    spec:
+      containers:
+      - name: my-devops-app
+        image: first-devops-app:latest
+        imagePullPolicy: IfNotPresent #Pull from the internet if not found locally
+        ports:
+        - containerPort: 8000
