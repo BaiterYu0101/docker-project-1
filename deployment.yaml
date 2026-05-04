@@ -13,8 +13,11 @@ spec:
         app: my-devops-app
     spec:
       containers:
-      - name: my-devops-app
-        image: first-devops-app:latest
+      - name: my-app
+        image: ghcr.io/baiteryu0101/docker-project-1/my-app:862551b51be2df74f26fddf59433cd9303d84c25
         imagePullPolicy: IfNotPresent #Pull from the internet if not found locally
         ports:
         - containerPort: 8000
+      imagePullSecrets: 
+        - name: ghcr-secret
+        
