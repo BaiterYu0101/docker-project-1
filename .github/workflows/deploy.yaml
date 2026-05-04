@@ -28,3 +28,4 @@ jobs:
         with:
           push: true
           tags: ghcr.io/baiteryu0101/docker-project-1/my-app:${{ github.sha }}
+          
