@@ -1,1 +1,0 @@
-From the Dockerfile, the 1st . will be the current direcotry of the file and the 2nd . will be the destination of the file.
